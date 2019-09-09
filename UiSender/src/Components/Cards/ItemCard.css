@@ -1,0 +1,16 @@
+.flex-container
+{
+    display: flex;
+    flex: 1 1 1 ;
+    flex-flow: row wrap;
+    justify-content: center space-between;
+    align-content: center;
+    align-self: center;
+    padding-left: 200px;
+    padding-right: 210px;
+}
+
+.card{
+    width: 250px;
+    border-radius: 30px
+}

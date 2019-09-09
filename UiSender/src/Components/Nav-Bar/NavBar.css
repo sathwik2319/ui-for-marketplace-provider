@@ -1,0 +1,12 @@
+.app-bar{
+    background-color: maroon !important
+}
+.text-deco{
+    font-family: 'Lobster', cursive;
+    margin-left: 2px;
+    padding: 5px;
+    
+}
+.length{
+    width: 100%
+}
