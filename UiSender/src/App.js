@@ -10,6 +10,7 @@ import About from './Components/About/About';
 import Home from './Components/Home/Home';
 import Provider from './Components/Provider';
 import Checkout from './Components/Booking/Checkout';
+import Featured from './Components/Featured';
 
 
 export default class App extends React.Component {
@@ -19,7 +20,8 @@ export default class App extends React.Component {
     <div >
 
       <Switch>
-        <Route exact path='/' component={Home}></Route>
+      <Route exact path='/' component={Featured}></Route>
+        <Route exact path='/home' component={Home}></Route>
         <Route exact path='/profile' component={Profile}></Route>
         <Route exact path='/about' component={About}></Route>
         <Route exact path='/provider' component={Provider}></Route>

@@ -34,6 +34,7 @@ import CommonBar from './Nav-Bar/Common-bar';
           flexDirection: 'column',
           boxShadow: '3px white'
         },
+        hover:{},
         cardMedia: {
           paddingTop: '56.25%', // 16:9
         },
@@ -55,7 +56,7 @@ import CommonBar from './Nav-Bar/Common-bar';
           super(props);
           this.state={
             formOpen:false,
-            cards :[1, 2, 3]
+            cards :[1, 2, 3],shadow:1
           }
 
           this.addForm=this.addForm.bind(this);
@@ -66,6 +67,9 @@ import CommonBar from './Nav-Bar/Common-bar';
           this.setState({formOpen:true})
         }
 
+
+        onMouseOver = () => this.setState({ shadow: 3 });
+onMouseOut = () => this.setState({ shadow: 1 });
 
         
         // addForm(e){
@@ -87,7 +91,9 @@ import CommonBar from './Nav-Bar/Common-bar';
                 <Grid container spacing={4}>
                   {this.state.cards.map(card => (
                     <Grid item key={card} xs={12} sm={6} md={3}>
-                      <Card >
+                      <Card onMouseOver={this.onMouseOver}
+   onMouseOut={this.onMouseOut}
+   zDepth={this.state.shadow}>
                         <CardMedia
                           
                           image="https://picsum.photos/800/315/?random"
@@ -118,7 +124,7 @@ import CommonBar from './Nav-Bar/Common-bar';
             
             {this.state.formOpen &&
             <Card>
-            <div className="col s6 l5 m3 offset-l2">
+            <div className="col s6 m3 form -div" md={3}>
         <form onSubmit={this.formSubmit}>
           <div className="input-field">
             <i className="material-icons prefix">email</i>
@@ -136,7 +142,9 @@ import CommonBar from './Nav-Bar/Common-bar';
             <label for="file">Add FIle</label>
           </div>
           <div>
-          <Button className="btn btn-info" type="submit">Submit</Button>
+          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
           </div>
 
           </form>
