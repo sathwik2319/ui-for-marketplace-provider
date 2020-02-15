@@ -20,7 +20,7 @@
     "reactstrap": "^8.0.1",
     "redux-form": "^8.2.6",
     "semantic-ui-react": "^0.88.0",
-    "yarn": "^1.17.3"
+    "yarn": "^1.22.0"
   },
   "scripts": {
     "start": "react-scripts start",
